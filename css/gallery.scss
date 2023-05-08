@@ -26,22 +26,22 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
 
     .options {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         align-items: stretch;
         overflow: hidden;
-
-        min-width: 600px;
+        width: 100%;
+        // min-width: 600px;
         max-width: 900px;
         width: calc(100% - 100px);
 
         height: 400px;
 
         @for $i from 1 through 4 {
-            @media screen and (max-width:calc(798px - ($i*80px))) {
-                min-width: 600px - $i*80;
+            @media screen and (max-width:480px) {
 
-                .option:nth-child(#{6-$i}) {
-                    display: none;
+                .option {
+                    width: 0px;
                 }
             }
         }
@@ -49,8 +49,8 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
         .option {
             position: relative;
             overflow: hidden;
-
-            min-width: 60px;
+            // width: 10px;
+            // min-width: 20px;
             margin: 10px;
             //border:0px solid --defaultColor;
 
@@ -69,10 +69,10 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
             }
 
             &.active {
-                flex-grow: 10000;
+                flex-grow: 6;
                 transform: scale(1);
 
-                max-width: 600px;
+                // max-width: 400px;
                 margin: 0px;
                 border-radius: 40px;
 

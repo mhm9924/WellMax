@@ -16,50 +16,38 @@
 }
 .work_section .options {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
-  min-width: 600px;
+  width: 100%;
   max-width: 900px;
   width: calc(100% - 100px);
   height: 400px;
 }
-@media screen and (max-width: 718px) {
-  .work_section .options {
-    min-width: 520px;
-  }
-  .work_section .options .option:nth-child(5) {
-    display: none;
+@media screen and (max-width: 480px) {
+  .work_section .options .option {
+    width: 0px;
   }
 }
-@media screen and (max-width: 638px) {
-  .work_section .options {
-    min-width: 440px;
-  }
-  .work_section .options .option:nth-child(4) {
-    display: none;
+@media screen and (max-width: 480px) {
+  .work_section .options .option {
+    width: 0px;
   }
 }
-@media screen and (max-width: 558px) {
-  .work_section .options {
-    min-width: 360px;
-  }
-  .work_section .options .option:nth-child(3) {
-    display: none;
+@media screen and (max-width: 480px) {
+  .work_section .options .option {
+    width: 0px;
   }
 }
-@media screen and (max-width: 478px) {
-  .work_section .options {
-    min-width: 280px;
-  }
-  .work_section .options .option:nth-child(2) {
-    display: none;
+@media screen and (max-width: 480px) {
+  .work_section .options .option {
+    width: 0px;
   }
 }
 .work_section .options .option {
   position: relative;
   overflow: hidden;
-  min-width: 60px;
   margin: 10px;
   background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
   background-size: auto 120%;
@@ -86,9 +74,8 @@
   --defaultBackground:#AC92EC;
 }
 .work_section .options .option.active {
-  flex-grow: 10000;
+  flex-grow: 6;
   transform: scale(1);
-  max-width: 600px;
   margin: 0px;
   border-radius: 40px;
   background-size: auto 100%;

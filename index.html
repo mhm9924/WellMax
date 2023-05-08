@@ -25,6 +25,7 @@
     rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/autoslider.css" rel="stylesheet" />
   <link href="css/gallery.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
@@ -516,78 +517,32 @@
 
   <!-- result section -->
 
-  <section class="work_section">
-    <div class="options">
-      <div class="option active"
-        style="--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);">
-        <div class="shadow"></div>
-        <div class="label">
-          <div class="icon">
-            <i class="fas fa-walking"></i>
-          </div>
-          <div class="info">
-            <div class="main">Blonkisoaz</div>
-            <div class="sub">Omuke trughte a otufta</div>
-          </div>
+  <div class="slider-container mt-5">
+    <section class="work_section">
+      <div class="options">
+        <div class="option active" style="--optionBackground:url(../images/gallery1.jpg);">
+          <div class="shadow"></div>
         </div>
-      </div>
-      <div class="option"
-        style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
-        <div class="shadow"></div>
-        <div class="label">
-          <div class="icon">
-            <i class="fas fa-snowflake"></i>
-          </div>
-          <div class="info">
-            <div class="main">Oretemauw</div>
-            <div class="sub">Omuke trughte a otufta</div>
-          </div>
+        <div class="option" style="--optionBackground:url(../images/gallery2.jpg);">
+          <div class="shadow"></div>
         </div>
-      </div>
-      <div class="option"
-        style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
-        <div class="shadow"></div>
-        <div class="label">
-          <div class="icon">
-            <i class="fas fa-tree"></i>
-          </div>
-          <div class="info">
-            <div class="main">Iteresuselle</div>
-            <div class="sub">Omuke trughte a otufta</div>
-          </div>
+        <div class="option" style="--optionBackground:url(../images/gallery3.jpg);">
+          <div class="shadow"></div>
         </div>
-      </div>
-      <div class="option"
-        style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
-        <div class="shadow"></div>
-        <div class="label">
-          <div class="icon">
-            <i class="fas fa-tint"></i>
-          </div>
-          <div class="info">
-            <div class="main">Idiefe</div>
-            <div class="sub">Omuke trughte a otufta</div>
-          </div>
+        <div class="option" style="--optionBackground:url(../images/gallery4.jpg);">
+          <div class="shadow"></div>
         </div>
-      </div>
-      <div class="option"
-        style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-        <div class="shadow"></div>
-        <div class="label">
-          <div class="icon">
-            <i class="fas fa-sun"></i>
-          </div>
-          <div class="info">
-            <div class="main">Inatethi</div>
-            <div class="sub">Omuke trughte a otufta</div>
-          </div>
+        <div class="option" style="--optionBackground:url(../images/gallery5.jpg)">
+          <div class="shadow"></div>
         </div>
+        <div class="option" style="--optionBackground:url(../images/gallery6.jpg)">
+          <div class="shadow"></div>
+        </div>
+        <button id="next" class="btn">Next</button>
       </div>
-    </div>
+    </section>
+  </div>
 
-    <a href="http://victorofvalencia-blog.tumblr.com" target="_blank" class="credit">Photos from Victor of Valencia on
-      tumblr</a>
-  </section>
 
   <!-- end result section -->
 
@@ -801,7 +756,71 @@
       $(this).addClass("active");
 
     });
+    $("#next").click(function () {
+      let element = $(".option.active");
+      // console.log(element);
+      // $(".option.active + .option").addClass("active");
+      if (!document.querySelector(".option.active + .option")) {
+        document.querySelector(".option").classList.add("active");
+      }
+      else {
+        document.querySelector(".option.active + .option").classList.add("active");
+      }
+      element.removeClass("active");
+    })
+    var originalContent = '<section class="work_section"><div class="options"><div class="option active" style="--optionBackground:url(../images/gallery1.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery2.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery3.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery4.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery5.jpg)"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery6.jpg)"><div class="shadow"></div></div><button id="next" class="btn">Next</button></div></section>';
 
+    var smallContent = '<section class="auto-slider result_section"><div id="slider"><figure><img src="./images/gallery1.jpg" alt="Image"><img src="./images/gallery2.jpg" alt="Image"><img src="./images/gallery3.jpg" alt="Image"><img src="./images/gallery4.jpg" alt="Image"><img src="./images/gallery5.jpg" alt="Image"><img src="./images/gallery6.jpg" alt="Image"></figure><!-- <div class="indicator"></div> --></div></section>';
+
+    // $(window).resize(function () {
+    //   if (window.innerWidth < 480) {
+
+    //     // originalContent = $('.slider').innerHTML;
+
+
+
+    //   } else if (window.innerWidth > 480) {
+    //     console.log("sdfsdf");
+    //     // Change back to original .LatestNews
+    //     $('.slider-container').replaceWith(originalContent);
+    //   }
+    // }).resize();
+    var parentElem = $('.slider-container'), s = 0;
+
+    //call your function every time the browser is re-sized. The arguments are: 1. the parent of the content you want to change, 2. the original content, 3. the content you want to show on larger screens 
+    $(window).resize(function () {
+      replaceContent(parentElem, smallContent, originalContent);
+    });
+
+    function replaceContent(parent, small, big) {
+      // check if a breakpoint has been "crossed". I'm using the 's' variable to check if we have already run at this breakpoint to prevent needlessly repeating the function every time the user re-sizes.
+      if (window.innerWidth < 800 && s === 1) {
+        parent.children().remove();
+        parent.html(small);
+        s = 0;
+      } else if (window.innerWidth > 800 && s === 0) {
+        parent.children().remove();
+        parent.html(big);
+        s = 1;
+        $(".option").click(function () {
+          $(".option").removeClass("active");
+          $(this).addClass("active");
+
+        });
+        $("#next").click(function () {
+          let element = $(".option.active");
+          // console.log(element);
+          // $(".option.active + .option").addClass("active");
+          if (!document.querySelector(".option.active + .option")) {
+            document.querySelector(".option").classList.add("active");
+          }
+          else {
+            document.querySelector(".option.active + .option").classList.add("active");
+          }
+          element.removeClass("active");
+        })
+      };
+    }
   </script>
 </body>
 
