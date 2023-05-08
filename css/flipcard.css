@@ -16,7 +16,7 @@ h3 {
 
 /* THE FRONT */
 .front {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-front.jpg);
+  background-image: url("../images/wellmaxcardFront.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -24,9 +24,8 @@ h3 {
 /* /end */
 /* THE BACK */
 .back {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-back.jpg);
+  background-image: url("../images/wellmaxcard.jpg");
   background-size: cover;
-  background-position: top;
 }
 .back h1,
 .back p,
@@ -115,7 +114,6 @@ h3 {
 .back {
   height: 350px;
   width: 100%;
-  min-width: 500px;
 }
 
 .flipper {
@@ -158,4 +156,10 @@ h3 {
 
 .vertical.flip-container:hover .flipper {
   transform: rotateX(-180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .back {
+    background: #fff;
+  }
 }/*# sourceMappingURL=flipcard.css.map */
