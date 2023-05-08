@@ -12,6 +12,7 @@ h1.splitting[data-scroll=out] .char {
 
 .page > h1 {
   color: #9e34ff;
+  font-weight: bold;
 }
 
 code {

@@ -899,4 +899,15 @@ a:focus {
     color: $white;
 }
 
+.img-con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 /* end footer section*/
+@media (max-width: 768px) {
+    .img-con {
+        display: none;
+    }
+}
