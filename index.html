@@ -751,23 +751,7 @@
         .querySelector(".custom_menu-btn")
         .classList.toggle("menu_btn-style");
     }
-    $(".option").click(function () {
-      $(".option").removeClass("active");
-      $(this).addClass("active");
 
-    });
-    $("#next").click(function () {
-      let element = $(".option.active");
-      // console.log(element);
-      // $(".option.active + .option").addClass("active");
-      if (!document.querySelector(".option.active + .option")) {
-        document.querySelector(".option").classList.add("active");
-      }
-      else {
-        document.querySelector(".option.active + .option").classList.add("active");
-      }
-      element.removeClass("active");
-    })
     var originalContent = '<section class="work_section"><div class="options"><div class="option active" style="--optionBackground:url(../images/gallery1.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery2.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery3.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery4.jpg);"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery5.jpg)"><div class="shadow"></div></div><div class="option" style="--optionBackground:url(../images/gallery6.jpg)"><div class="shadow"></div></div><button id="next" class="btn">Next</button></div></section>';
 
     var smallContent = '<section class="auto-slider result_section"><div id="slider"><figure><img src="./images/gallery1.jpg" alt="Image"><img src="./images/gallery2.jpg" alt="Image"><img src="./images/gallery3.jpg" alt="Image"><img src="./images/gallery4.jpg" alt="Image"><img src="./images/gallery5.jpg" alt="Image"><img src="./images/gallery6.jpg" alt="Image"></figure><!-- <div class="indicator"></div> --></div></section>';
@@ -791,7 +775,29 @@
     $(window).resize(function () {
       replaceContent(parentElem, smallContent, originalContent);
     });
+    $(document).ready(function () {
+      if (window.innerWidth < 800) {
+        parentElem.children().remove();
+        parentElem.html(smallContent);
+      }
+      $(".option").click(function () {
+        $(".option").removeClass("active");
+        $(this).addClass("active");
 
+      });
+      $("#next").click(function () {
+        let element = $(".option.active");
+        // console.log(element);
+        // $(".option.active + .option").addClass("active");
+        if (!document.querySelector(".option.active + .option")) {
+          document.querySelector(".option").classList.add("active");
+        }
+        else {
+          document.querySelector(".option.active + .option").classList.add("active");
+        }
+        element.removeClass("active");
+      })
+    })
     function replaceContent(parent, small, big) {
       // check if a breakpoint has been "crossed". I'm using the 's' variable to check if we have already run at this breakpoint to prevent needlessly repeating the function every time the user re-sizes.
       if (window.innerWidth < 800 && s === 1) {
