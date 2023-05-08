@@ -207,6 +207,7 @@ a:focus {
 /* slider section */
 .slider_section {
   height: calc(100% - 80px);
+  max-height: 800px;
   background-image: url(../images/sliderbg.jpg);
   background-size: cover;
 }
@@ -217,6 +218,7 @@ a:focus {
 }
 .slider_section #carouselExampleIndicators {
   width: 100%;
+  min-height: 400px;
 }
 .slider_section .detail-box h2 {
   color: #9e34ff;
