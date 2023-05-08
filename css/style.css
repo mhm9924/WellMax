@@ -492,6 +492,10 @@ a:focus {
   color: #ffffff;
   background-color: #3c0e78;
 }
+.result_section h2 {
+  text-align: center;
+  font-family: "LogoFont";
+}
 .result_section .row {
   align-items: center;
 }

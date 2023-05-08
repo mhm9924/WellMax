@@ -632,6 +632,11 @@ a:focus {
     color: $white;
     background-color: #3c0e78;
 
+    h2 {
+        text-align: center;
+        font-family: 'LogoFont';
+    }
+
     .row {
         align-items: center;
     }
