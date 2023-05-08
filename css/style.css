@@ -411,6 +411,7 @@ a:focus {
 
 .us_section {
   background-image: url("../images/whyus_bg.jpg");
+  background-position: center;
   color: #ffffff;
 }
 .us_section .us_container {
