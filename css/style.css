@@ -553,6 +553,7 @@ a:focus {
 }
 .contact_section .heading_container {
   justify-content: center;
+  margin-bottom: 0px;
 }
 .contact_section .heading_container h2 {
   text-transform: unset;
