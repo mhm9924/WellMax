@@ -15,8 +15,9 @@ h1.splitting[data-scroll=out] .char {
   font-weight: bold;
 }
 
-code {
+.number {
   color: black;
+  font-weight: bold;
 }
 
 /* ---------------------------------- */
