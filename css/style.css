@@ -354,6 +354,9 @@ a:focus {
 .service_section .service_container .box h6 {
   font-weight: bold;
   text-transform: uppercase;
+  color: #151615;
+  background: #9e34ff;
+  padding: 2px 20px;
 }
 .service_section .service_container .box img {
   width: 100%;

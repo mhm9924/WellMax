@@ -447,6 +447,9 @@ a:focus {
             h6 {
                 font-weight: bold;
                 text-transform: uppercase;
+                color: $btnBlack;
+                background: $primary;
+                padding: 2px 20px;
             }
 
             img {
