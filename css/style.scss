@@ -104,7 +104,7 @@ body {
 
 .hero_area {
     height: 100vh;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../images/hero-bg.jpg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
@@ -447,7 +447,7 @@ a:focus {
             h6 {
                 font-weight: bold;
                 text-transform: uppercase;
-                color: $btnBlack;
+                color: $white;
                 background: $primary;
                 padding: 2px 20px;
             }
