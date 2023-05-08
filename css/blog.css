@@ -1,48 +1,32 @@
-.post {
-    display: grid;
-    max-width: 1000px;
-    width: 1000px;
-    margin: 200px auto;
-    grid-template-columns: 3fr 12fr 5fr;
-    grid-gap: 10px 20px;
+h1.splitting {
+  color: #84a8ff;
+}
+h1.splitting .char {
+  transition: transform 0.3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear;
+  transition-delay: calc(20ms * var(--char-index));
+}
+h1.splitting[data-scroll=out] .char {
+  opacity: 0.1;
+  transform: translateY(0.25em);
 }
 
-.post>* {
-    grid-column: 2 / -2;
+.page > h1 {
+  color: #9e34ff;
 }
 
-.post>figure {
-    margin: 0;
-    grid-column: 1 / -1;
+code {
+  color: black;
 }
 
-
-figcaption {
-    font-size: 12px;
+/* ---------------------------------- */
+.page {
+  max-width: 50em;
+  margin: auto;
+  overflow: hidden;
 }
 
-.post>blockquote {
-    grid-column: 1 / -1;
-    font-size: 60px;
-    margin: 0;
-    font-style: italic;
-    text-align: center;
-}
-
-.tip {
-    background: #EBEBEB;
-    padding: 10px;
-    grid-row: span 5;
-    align-self: start;
-}
-
-.tip-left {
-    grid-column: 1 / span 1;
-    text-align: right;
-    border-right: 2px solid var(--yellow);
-}
-
-.tip-right {
-    grid-column: span 1 / -1;
-    border-left: 2px solid var(--yellow);
-}
+.page > div > img {
+  max-width: 250px;
+  width: calc(100% - 50px);
+  margin: auto;
+}/*# sourceMappingURL=blog.css.map */
