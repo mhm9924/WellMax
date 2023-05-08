@@ -410,7 +410,7 @@ a:focus {
 }
 
 .us_section {
-  background-color: #3c0e78;
+  background-image: url("../images/sliderbg.jpg");
   color: #ffffff;
 }
 .us_section .us_container {
