@@ -141,13 +141,28 @@ body {
         width: 95%;
         margin-right: auto;
 
+        .navbar-nav {
+            align-items: center;
+        }
+
         .nav-item {
             flex: 1;
+
+            #location-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 25px;
+                }
+            }
 
             .nav-link {
                 padding: 0px 25px;
                 color: $black;
                 text-align: center;
+                font-size: 0.7rem;
 
                 img {
                     width: 22px;

@@ -87,13 +87,25 @@ body {
   width: 95%;
   margin-right: auto;
 }
+.custom_nav-container .contact_nav .navbar-nav {
+  align-items: center;
+}
 .custom_nav-container .contact_nav .nav-item {
   flex: 1;
+}
+.custom_nav-container .contact_nav .nav-item #location-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom_nav-container .contact_nav .nav-item #location-nav img {
+  height: 25px;
 }
 .custom_nav-container .contact_nav .nav-item .nav-link {
   padding: 0px 25px;
   color: #000000;
   text-align: center;
+  font-size: 0.7rem;
 }
 .custom_nav-container .contact_nav .nav-item .nav-link img {
   width: 22px;
