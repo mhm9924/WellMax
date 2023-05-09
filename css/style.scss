@@ -932,10 +932,26 @@ a:focus {
     }
 }
 
+.fade {
+    opacity: 0;
+}
+
+#small-gallery {
+    display: none;
+}
+
 /* end footer section*/
 @media (max-width: 768px) {
     .img-con {
         display: none;
+    }
+
+    #big-gallery {
+        display: none;
+    }
+
+    #small-gallery {
+        display: block;
     }
 
     .img-statue {
