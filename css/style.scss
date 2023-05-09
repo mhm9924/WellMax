@@ -505,6 +505,7 @@ a:focus {
                     margin-top: 15px;
                 }
 
+
             }
 
             &::before {
@@ -944,10 +945,26 @@ a:focus {
     }
 }
 
-// @media (min-width: 1300px) {
-//     .img-statue {
-//         img {
-//             left: 40%;
-//         }
-//     }
-// }
+@media (max-width: 1000px) {
+    .link_box {
+        // h6 {
+        //     font-size: 0.8rem;
+        // }
+
+        p {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .link_box {
+        h6 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+        }
+    }
+}

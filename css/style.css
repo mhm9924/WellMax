@@ -763,4 +763,17 @@ a:focus {
   .img-statue img {
     display: none;
   }
+}
+@media (max-width: 1000px) {
+  .link_box p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  .link_box h6 {
+    font-size: 0.8rem;
+  }
+  .link_box p {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
